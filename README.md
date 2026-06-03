@@ -1,3 +1,30 @@
+# Differentially Private Multiaccuracy Boosting
+
+Course project for CS 2260 (Differential Privacy) at Harvard University, advised by Professor Cynthia Dwork.
+
+**Authors:** Suhwan Bong, Sarra Guezguez, Annabel Lowe
+
+We extend the Multiaccuracy Boost algorithm (Kim et al., 2019) to satisfy (ε, δ)-differential 
+privacy with respect to the audit dataset. The key contributions are:
+
+- A DP-SGD auditor training procedure with formal per-round privacy guarantees
+- A noisy correlation query using the Gaussian mechanism for the stopping condition
+- Composition proofs showing the full boosting procedure is (ε, δ)-DP
+- Empirical evaluation on the LFW dataset showing the privacy-fairness-accuracy tradeoff
+
+## Results
+
+DP-MA substantially reduces group accuracy gaps (e.g. from 0.071 to 0.010 for the Indian 
+subgroup) at the cost of overall accuracy (~10 percentage point drop), consistent with the 
+theoretical incompatibility between exact fairness and differential privacy.
+
+## Reference
+
+Kim, M. P., Ghorbani, A., & Zou, J. (2019). Multiaccuracy: Black-box post-processing for 
+fairness in classification. AAAI/ACM Conference on AI, Ethics, and Society.
+
+## Original codebase
+
 # MultiAccuracyBoost
 Multiaccuracy: Black-Box Post-Processing for Fairness in Classification
 
